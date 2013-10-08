@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Hendelser med jQuery</title>
+	<!-- Husk å legge til CSS filen din her" -->
+	<link rel="stylesheet" href="lab3.css" type="text/css" media="all" />
+	<script src="js/jquery-1.8.1.js"></script>
+    <script>
+	
+	$(function() {
+		// Setter en "observatør" for keydown hendelse på noden document.body
+		$(document.body).on('keydown', function(e) {
+		// Sorterer ut de tastetrykkene man ønsker å gi en respons på
+		// Her brukes det en struktur switch som finnes i de fleste programmeringsspråk
+		switch (e.which) {
+			// tastekode for venstre pil; responsen er en utskrift til konsollen (innebygd i nettlesere)
+			case 37:
+				// Her og i andre case skal koden for å skrive til innerHTML skrives (deloppgave 0)
+				var venstre="venstre pil tast trykket!"
+				console.log( 'venstre pil tast trykket!' );
+				document.getElementById('keypressed').innerHTML = (venstre);
+				$("p").last().addClass("blue");
+				break;
+        
+			// tastekode for høyre pil
+			case 39:
+			var hoyrepil="høyre pil tast trykket!";
+				console.log( 'høyre pil tast trykket!' );
+				document.getElementById('keypressed').innerHTML = (hoyrepil);
+				$("p").last().addClass("blue");
+				break;
+
+			// Her skal koden for å behandle andre tastetrykk skrives (deloppgave 0)
+			case 38:
+			var opp="opp-pilen ble trykket på";
+			console.log ( ' opp-pilen ble trykket på ');
+			document.getElementById('keypressed').innerHTML = (opp);
+			$("p").last().addClass("blue");
+			break;
+			case 40:
+			var ned="ned-pilen ble trykket på";
+			console.log ( ' ned-pilen ble trykket på');
+			document.getElementById('keypressed').innerHTML = (ned);
+			$("p").last().addClass("blue");
+			break;
+		}
+		});
+	});
+
+	</script>
+</head>
+<body>
+	<p>Testside for å "fange" hendelser fra tastatur.</p>
+	<p id=keypressed>Bruk en av piltastene for å se resultatet her!</p>
+	<!-- Oppgaveløsning skal implementeres her -->
+
+
+
+
+
+</body>
+</html>

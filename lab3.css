@@ -1,2 +1,8 @@
+#my_canvas { 
+    border: solid 3px;
+    width: 200px;
+    height: 200px;
+}
+
 .blue{color:blue;}
 .purple{color:purple;}

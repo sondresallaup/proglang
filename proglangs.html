@@ -17,11 +17,14 @@
 <hr>
 <!-- Site navigation menu -->
 <ul class="navbar">
-  <li><a href="index.html">Hjem</a>
-  <li><a href="#">Kronologisk</a>
-  <li><a href="#">Hierarkisk</a>
-  <li><a href="#">Alfabetisk</a>
+  <li><a href="proglangs.html">Hjem</a>
+  <li><a href="#" onmouseover="showbox('underKonstruksjon')" onmouseout="hidebox('underKonstruksjon')">Kronologisk</a></li>
+  <li><a href="#" onmouseover="showbox('underKonstruksjon')" onmouseout="hidebox('underKonstruksjon')">Hierarkisk</a></li>
+  <li><a href="#" onmouseover="showbox('underKonstruksjon')" onmouseout="hidebox('underKonstruksjon')">Alfabetisk</a></li>
 </ul>
+
+<div id="underKonstruksjon" class="hide"><p>Under konstruksjon</p></div>
+
 <body>
 <p id="skriv">Velkommen til en mystisk verden av programmeringsspråk! </p>
 <select name="proglangselect" id="språk" onChange="displayResults(this)">
@@ -63,7 +66,13 @@ function displayResults(selectobj) {
 e_skriv.innerHTML = "Du valgte <b>" + e_språk.options[selectobj.selectedIndex].text;
 }
 
-
+function showbox(x){
+document.getElementById(x).style.display = 'block';
+}
+function hidebox(x)
+{
+document.getElementById(x).style.display = 'none';
+}
 
 </script>
 </div>
